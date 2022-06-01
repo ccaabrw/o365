@@ -10,7 +10,7 @@ Set-MailboxAutoReplyConfiguration -Identity ccaabrw -AutoReplyState scheduled `
   -StartTime $d1 -EndTime $d2 `
   -InternalMessage "I am on leave until 13th June" -ExternalMessage $null
 
-# Use 4PM start time (is it UTC?) - also seems to take time to effect
+# Use 4PM start time - since Cloud Shell is in UTC (?)
 #
 # Parameterise this properly
 # Add a whatif and verbose option
