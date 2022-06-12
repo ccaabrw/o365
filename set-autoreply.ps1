@@ -7,7 +7,7 @@ $d1 = New-Object System.DateTime(2022,6,12,16,0,0)
 # end date
 $d2 = New-Object System.DateTime(2022,6,17,6,0,0)
 
-# message
+# messages
 $msg = "I am on leave until 13th June"
 $msg = "I am on a training course until 17th June"
 
