@@ -13,11 +13,12 @@ $d1 = New-Object System.DateTime(2023,4,27,16,0,0)
 $d1 = New-Object System.DateTime(2023,5,17,12,0,0)
 $d1 = New-Object System.DateTime(2023,6,2,16,0,0)
 $d1 = New-Object System.DateTime(2023,6,16,7,0,0)
+$d1 = New-Object System.DateTime(2023,8,23,12,0,0)
 
 # end date
 # 06:00 for whole day holidays
 # 00:00 just after a half day
-$d2 = New-Object System.DateTime(2023,6,16,17,0,0)
+$d2 = New-Object System.DateTime(2023,8,24,0,0,0)
 
 # messages
 $msg = "I am on leave until 13th June"
@@ -29,9 +30,9 @@ $msg = "I am on leave until 21st March"
 $msg = "I am on leave until 27th March"
 $msg = "I am on leave until 17th April"
 $msg = "I am on leave until 9th May"
-$msg = "I am on leave this afternoon"
 $msg = "I am on leave until 12th June"
 $msg = "I am on leave for today only"
+$msg = "I am on leave this afternoon"
 
 Set-MailboxAutoReplyConfiguration -Identity ccaabrw -AutoReplyState scheduled `
   -StartTime $d1 -EndTime $d2 `
@@ -40,6 +41,7 @@ Set-MailboxAutoReplyConfiguration -Identity ccaabrw -AutoReplyState scheduled `
 # Use 4PM start time - since Cloud Shell is in UTC
 #
 # Parameterise this properly
+# Detect time zone?
 # Add a whatif and verbose option
 # Response is derived from expression according to end date
 # Handle local time zone
