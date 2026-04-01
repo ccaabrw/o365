@@ -34,6 +34,7 @@ $d1 = New-Object System.DateTime(2024,7,17,12,0,0)
 $d1 = New-Object System.DateTime(2024,9,4,7,0,0)
 $d1 = New-Object System.DateTime(2024,9,12,12,0,0)
 $d1 = New-Object System.DateTime(2024,9,13,12,0,0)
+$d1 = New-Object System.DateTime(2026,4,1,16,0,0)
 
 # end date
 # 06:00 for whole day holidays
@@ -59,6 +60,7 @@ $d2 = New-Object System.DateTime(2024,7,17,18,0,0)
 $d2 = New-Object System.DateTime(2024,9,4,18,0,0)
 $d2 = New-Object System.DateTime(2024,9,12,18,0,0)
 $d2 = New-Object System.DateTime(2024,9,13,18,0,0)
+$d2 = New-Object System.DateTime(2026,4,13,6,0,0)
 
 # messages
 $msg = "I am on leave until 13th June"
@@ -91,6 +93,7 @@ $msg = "I am on leave until 15th July"
 $msg = "I am on leave this afternoon"
 $msg = "I am on leave for today"
 $msg = "I am on leave this afternoon"
+$msg = "I am on leave until 13th April"
 
 Set-MailboxAutoReplyConfiguration -Identity ccaabrw -AutoReplyState scheduled `
   -StartTime $d1 -EndTime $d2 `
